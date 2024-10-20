@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style/estilohomelogout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="IMAGENS/só logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <header>
+
+        
+        <div class="logo">
+          <a href="homelogout.html">
+            <img src="IMAGENS/logo1.png">
+          </a>
+        </div>
+        <div class="buttons">
+    
+           
+        <div class="search">
+            <button class="search__toggle" aria-label="Open search">Search</button>
+            <form class="search__form" action="">
+                <label class="sr-only" for="search"></label>
+                <input type="search" id="search" placeholder="&#128269; pesquisar cursos"/>
+            </form>
+        </div>
+  
+        <h2 style="color: #fff; padding-left: 20px; padding-right: 20px;">Bem vindo!</h2>
+        <div class="buttommenu" style="margin: 20px; position: relative;">
+            <button id="toggleButton" style="background-color: #b1dbff; border: none; cursor: pointer; padding: 10px; border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+    
+            <!-- Lista sobreposta -->
+            <ul id="itemList" style="
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+                display: none; 
+                position: absolute; 
+                top: 100%; /* Coloca a lista abaixo do botão */
+                right: 0; 
+                background-color: #b1dbff;
+                border: 1px solid #ccc; 
+                width: 150px; /* Define a largura da lista */">
+                
+
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="homelogout.html">Home Page</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="sobrenóslogout.html"> Sobre Nós</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="cursoslogout.html"> Cursos </a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="index.html"> logout </a></li>            </ul>
+        </div>
+    </header>
+
+    <!--texto apresentação-->
+    <h1 class="titulo">Já conhece a PROFFY?</h1>
+    <div class="container-texto">
+        <img src="IMAGENS/aula_online 1.png" class="imagem_esquerda">
+        <p class="texto">Somos uma plataforma que viabiliza a educação facilitando o acesso professor-aluno atraves da nossa forma de divulgação.
+            Aqui você pode encontrar diversos cursos feitos por professores ja formados, cada um com sua metodologia de ensino.
+            E quem sai ganhando é você aluno, você decide o curso que quer, pelo valor que deseja e o tempo que vai demorar pra concluir.</p>
+    </div>
+
+    <!--carrossel cursos-->
+    <h1 class="titulo">Alguns dos nossos cursos são:</h1>
+    <!-- Swiper carrossel -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="IMAGENS/Design Gráfico.jpg">
+                <h4>Design Gráfico</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Introdução à Programação.jpg">
+                <h4>Introdução à Programação</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Marketing Digital.jpg">
+                <h4>Marketing Digital</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Fotografia Digital.jpg">
+                <h4>Fotografia Digital</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Empreendedorismo.jpg">
+                <h4>Empreendedorismo</h4>
+                <button class="button">Conheça os professores!</button>
+                </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Inglês.jpg">
+                <h4>Inglês</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Inteligência Emocional.jpg">
+                <h4>Inteligência Emocional</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="IMAGENS/Edição de Imagens.jpg">
+                <h4>Edição de Imagens</h4>
+                <button class="button">Conheça os professores!</button>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+ <!--card públicos-->
+ <h1 class="titulo">Seja PROFFY</h1>
+ <div class="container-card">
+    <div class="card">
+        <img class="card-img" src="IMAGENS/professora.JPG">
+        <h4 class="card-titulo">Professor</h4>
+        <p class="card-texto">Ensinar na Proffy é transformar vidas ao compartilhar conhecimento. Cada professor hospeda o curso que criou, oferecendo uma plataforma personalizada para alcançar e inspirar os alunos. Faça a diferença!</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/aluno 1.JPG">
+        <h4 class="card-titulo">Aluno</h4>
+        <p class="card-texto">Estude na Proffy para desbloquear seu potencial, com cursos dinâmicos e interativos, criados por professores apaixonados. Aqui, você aprende no seu ritmo e se conecta com uma comunidade inspiradora. Transforme sua jornada educacional com a Proffy!</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/tutor 1.JPG">
+        <h4 class="card-titulo">Tutor</h4>
+        <p class="card-texto">Vire tutor na Proffy para fortalecer seu aprendizado, ganhar experiência e ajudar outros alunos a crescer. Transforme seu conhecimento em impacto positivo!</p>
+    </div>
+</div>
+
+<div id="containericons">
+    <style>
+        /* ===================== 
+           Menu Lateral de Ícones 
+           ===================== */
+        #icons {
+            width: 250px;
+            height: auto;
+            position: fixed;
+            top: 30%;
+            left: -200px; /* Mantém o menu fora da tela inicialmente */
+            border-radius: 10px;
+            transition: left 0.3s ease; /* Animação suave para o movimento */
+        }
+
+        #icons ul {
+            list-style: none;
+        }
+
+        #icons ul li {
+            display: block;
+            background: #131313;
+            padding: 10px;
+            height: 18px;
+            position: relative;
+            transition: all 0.5s ease;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        #icons ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Cores individuais para cada ícone */
+        #icons ul li:nth-child(1) {
+            background: #ff0000;
+        }
+
+        #icons ul li:nth-child(2) {
+            background: #030379;
+        }
+
+        #icons ul li:nth-child(3) {
+            background: #1c1f1d;
+        }
+
+        #icons ul li:nth-child(4) {
+            background: #11aeef;
+        }
+
+        #icons ul li:nth-child(5) {
+            background: #ff00ff;
+        }
+
+        #icons ul li span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: block;
+            right: 18px;
+            padding: 10px;
+        }
+
+        /* Efeito de hover nos ícones */
+        #icons ul li:hover {
+            cursor: pointer;
+            background: #131313;
+            opacity: 0.8;
+            border-left: 10px solid #fff;
+            transform: translateX(150px);
+        }
+    </style>
+    <nav id="icons">
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/@WebOnlineDesenvolve">
+                    meu youtube
+                    <span>
+                        <i class="fa fa-youtube-play"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com">
+                    meu facebook
+                    <span>
+                        <i class="fa fa-facebook"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com">
+                    meu github
+                    <span>
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/mynetwork/grow/">
+                    meu linkedin
+                    <span>
+                        <i class="fa fa-linkedin"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com">
+                    meu instagram
+                    <span>
+                        <i class="fa fa-instagram"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="sobrenóslogout.html">Sobre Nós</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h4>Contato</h4>
+                <ul>
+                    <li>Email: contato@exemplo.com</li>
+                    <li>Telefone: (11) 1234-5678</li>
+                    <li>Endereço: Rua Exemplo, 123 - Cidade, Estado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </footer>
+ <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const itemList = document.getElementById('itemList');
+
+    toggleButton.addEventListener('click', function() {
+        if (itemList.style.display === "none" || itemList.style.display === "") {
+            itemList.style.display = "block"; // Mostra a lista
+        } else {
+            itemList.style.display = "none"; // Oculta a lista
+        }
+    });
+</script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSOS</title>
+    <link rel="stylesheet" href="style/estilocursoslogin.css">
+    <link rel="icon" href="IMAGENS/só logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+<body>
+
+    <header>
+
+        
+        <div class="logo">
+          <a href="index.html">
+            <img src="IMAGENS/logo1.png">
+          </a>
+        </div>
+        <div class="buttons">
+    
+           
+        <div class="search">
+            <button class="search__toggle" aria-label="Open search">Search</button>
+            <form class="search__form" action="">
+                <label class="sr-only" for="search"></label>
+                <input type="search" id="search" placeholder="&#128269; pesquisar cursos"/>
+            </form>
+        </div>
+  
+        <div class="buttons">
+          <a href="#" onclick="openModal()">
+            <button>LOGIN</button>
+          </a>
+        </div>   
+        <div class="buttommenu" style="margin: 20px; position: relative;">
+            <button id="toggleButton" style="background-color: #b1dbff; border: none; cursor: pointer; padding: 10px; border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+    
+            <!-- Lista sobreposta -->
+            <ul id="itemList" style="
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+                display: none; 
+                position: absolute; 
+                top: 100%; /* Coloca a lista abaixo do botão */
+                right: 0; 
+                background-color: #b1dbff;
+                border: 1px solid #ccc; 
+                width: 150px; /* Define a largura da lista */">
+                
+
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="index.html">Home Page</a></li>
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="#" onclick="openModal()">login</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="sobrenóslogin.html"> Sobre Nós</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="cursoslogin.html"> Cursos </a></li>
+
+            </ul>
+        </div>
+    </header>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Iframe para carregar o formulário de login/registro -->
+            <iframe src="login.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Fecha o modal se clicar fora do conteúdo
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+<h1 class="titulo">Cursos Disponíveis</h1>
+<div class="container-texto">
+    <p class="texto" style="font-size:x-large ;">Explore os melhores cursos em diversas áreas de conhecimento.</p>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Design</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Design Gráfico.jpg">
+       <h4 class="card-titulo">Design Gráfico</h4>
+       <p class="card-texto">Aprenda a criar identidades visuais, logotipos e materiais gráficos profissionais.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/UX_UI Design.jpg">
+        <h4 class="card-titulo">UX/UI Design</h4>
+        <p class="card-texto">Domine a criação de interfaces intuitivas e experiências envolventes.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Web Design.jpg">
+        <h4 class="card-titulo">Web Design</h4>
+        <p class="card-texto">Desenvolva websites modernos e responsivos usando as melhores práticas.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Informática</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Introdução à Programação.jpg">
+       <h4 class="card-titulo">Introdução à Programação</h4>
+       <p class="card-texto">Inicie na programação com Python, JavaScript e muito mais.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Redes de Computadores.jpg">
+        <h4 class="card-titulo">Redes de Computadores</h4>
+        <p class="card-texto">Aprenda sobre administração e segurança de redes.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Segurança da Informação.jpg">
+        <h4 class="card-titulo">Segurança da Informação</h4>
+        <p class="card-texto">Garanta a segurança de dados e sistemas com técnicas avançadas.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Marketing</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Marketing Digital.jpg">
+       <h4 class="card-titulo">Marketing Digital</h4>
+       <p class="card-texto">Aprenda estratégias para promover negócios online com SEO, redes sociais e publicidade.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Gestão de Mídias Sociais.jpg">
+        <h4 class="card-titulo">Gestão de Mídias Sociais</h4>
+        <p class="card-texto">Domine a criação de conteúdo e campanhas eficazes para redes sociais.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/E-commerce.jpg">
+        <h4 class="card-titulo">E-commerce</h4>
+        <p class="card-texto">Entenda como montar e gerenciar uma loja virtual de sucesso.
+
+        </p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Fotografia</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Fotografia Digital.jpg">
+       <h4 class="card-titulo">Fotografia Digital</h4>
+       <p class="card-texto">Domine o uso de câmeras digitais e técnicas de composição fotográfica.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Edição de Imagens.jpg">
+        <h4 class="card-titulo">Edição de Imagens</h4>
+        <p class="card-texto">Aprimore suas fotos com técnicas avançadas de edição e retoque.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Videografia.jpg">
+        <h4 class="card-titulo">Videografia</h4>
+        <p class="card-texto">Aprenda a gravar e editar vídeos profissionais para diversas plataformas.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Negócios</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Empreendedorismo.jpg">
+       <h4 class="card-titulo">Empreendedorismo</h4>
+       <p class="card-texto">Aprenda como iniciar e gerenciar seu próprio negócio com sucesso.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Gestão de Projetos.jpg">
+        <h4 class="card-titulo">Gestão de Projetos</h4>
+        <p class="card-texto">Domine ferramentas e técnicas para gerenciar projetos de forma eficiente.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Finanças Pessoais.jpg">
+        <h4 class="card-titulo">Finanças Pessoais</h4>
+        <p class="card-texto">Aprenda a gerenciar suas finanças e planejar seu futuro financeiro.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Idiomas</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Inglês.jpg">
+       <h4 class="card-titulo">Inglês</h4>
+       <p class="card-texto">Aprimore seu inglês em todos os níveis, do básico ao avançado.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Espanhol.jpg">
+        <h4 class="card-titulo">Espanhol</h4>
+        <p class="card-texto">Aprenda espanhol de maneira prática e eficiente.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Mandarim.jpg">
+        <h4 class="card-titulo">Mandarim</h4>
+        <p class="card-texto">Domine a língua mais falada no mundo com cursos focados em prática.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div class="container-texto">
+    <h1 class="titulo">Cursos de Desenvolvimento Pessoal</h1>
+</div>
+<div class="container-card">
+    <div class="card">
+       <img class="card-img" src="IMAGENS/Inteligência Emocional.jpg">
+       <h4 class="card-titulo">Inteligência Emocional</h4>
+       <p class="card-texto">Aprenda a gerir suas emoções e alcançar equilíbrio pessoal e profissional.</p>
+       <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Produtividade.jpg">
+        <h4 class="card-titulo">Produtividade</h4>
+        <p class="card-texto">Melhore sua eficiência e aprenda técnicas para aumentar a produtividade.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+    <div class="card">
+        <img class="card-img" src="IMAGENS/Autoconfiança.jpg">
+        <h4 class="card-titulo">Autoconfiança</h4>
+        <p class="card-texto">Desenvolva habilidades para fortalecer sua confiança em várias áreas da vida.</p>
+        <button class="button">conheça os professores</button>
+    </div>
+</div>
+
+<div id="containericons">
+   <style>
+       /* ===================== 
+          Menu Lateral de Ícones 
+          ===================== */
+       #icons {
+           width: 250px;
+           height: auto;
+           position: fixed;
+           top: 30%;
+           left: -200px; /* Mantém o menu fora da tela inicialmente */
+           border-radius: 10px;
+           transition: left 0.3s ease; /* Animação suave para o movimento */
+       }
+
+       #icons ul {
+           list-style: none;
+       }
+
+       #icons ul li {
+           display: block;
+           background: #131313;
+           padding: 10px;
+           height: 20px;
+           position: relative;
+           transition: all 0.5s ease;
+           border-top-right-radius: 20px;
+           border-bottom-right-radius: 20px;
+       }
+
+       #icons ul li a {
+           display: flex;
+           color: #fff;
+           text-decoration: none;
+           font-size: 20px;
+       }
+
+       /* Cores individuais para cada ícone */
+       #icons ul li:nth-child(1) {
+           background: #ff0000;
+       }
+
+       #icons ul li:nth-child(2) {
+           background: #030379;
+       }
+
+       #icons ul li:nth-child(3) {
+           background: #1c1f1d;
+       }
+
+       #icons ul li:nth-child(4) {
+           background: #11aeef;
+       }
+
+       #icons ul li:nth-child(5) {
+           background: #ff00ff;
+       }
+
+       #icons ul li span {
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           display: flex;
+           right: 18px;
+           padding: 10px;
+           align-items: center;
+       }
+
+       /* Efeito de hover nos ícones */
+       #icons ul li:hover {
+           cursor: pointer;
+           background: #131313;
+           opacity: 0.8;
+           border-left: 10px solid #fff;
+           transform: translateX(150px);
+       }
+   </style>
+   <nav id="icons">
+       <ul>
+           <li>
+               <a href="https://www.youtube.com/@WebOnlineDesenvolve">
+                   meu youtube
+                   <span>
+                       <i class="fa fa-youtube-play"></i>
+                   </span>
+               </a>
+           </li>
+           <li>
+               <a href="https://www.facebook.com">
+                   meu facebook
+                   <span>
+                       <i class="fa fa-facebook"></i>
+                   </span>
+               </a>
+           </li>
+           <li>
+               <a href="https://github.com">
+                   meu github
+                   <span>
+                       <i class="fa fa-github"></i>
+                   </span>
+               </a>
+           </li>
+           <li>
+               <a href="https://www.linkedin.com/mynetwork/grow/">
+                   meu linkedin
+                   <span>
+                       <i class="fa fa-linkedin"></i>
+                   </span>
+               </a>
+           </li>
+           <li>
+               <a href="https://www.instagram.com">
+                   meu instagram
+                   <span>
+                       <i class="fa fa-instagram"></i>
+                   </span>
+               </a>
+           </li>
+       </ul>
+   </nav>
+</div>
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const itemList = document.getElementById('itemList');
+
+    toggleButton.addEventListener('click', function() {
+        if (itemList.style.display === "none" || itemList.style.display === "") {
+            itemList.style.display = "block"; // Mostra a lista
+        } else {
+            itemList.style.display = "none"; // Oculta a lista
+        }
+    });
+</script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+<footer>
+   <div class="footer-container">
+       <div class="footer-links">
+           <div class="section">
+               <h4>Links</h4>
+               <ul>
+                   <li><a href="sobrenóslogin.html">Sobre Nós</a></li>
+                   <li><a href="#">Serviços</a></li>
+                   <li><a href="#">Contato</a></li>
+                   <li><a href="#">Privacidade</a></li>
+               </ul>
+           </div>
+           <div class="section">
+               <h4>Contato</h4>
+               <ul>
+                   <li>Email: contato@exemplo.com</li>
+                   <li>Telefone: (11) 1234-5678</li>
+                   <li>Endereço: Rua Exemplo, 123 - Cidade, Estado</li>
+               </ul>
+           </div>
+       </div>
+   </div>
+</footer>
+<script src="crud.js">  </script>
+</body>
+</html>

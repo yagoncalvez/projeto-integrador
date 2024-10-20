@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOBRE NÓS</title>
+    <link rel="stylesheet" href="style/estilosobrenóslogin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="IMAGENS/só logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+
+        
+        <div class="logo">
+          <a href="index.html">
+            <img src="IMAGENS/logo1.png">
+          </a>
+        </div>
+        <div class="buttons">
+    
+           
+        <div class="search">
+            <button class="search__toggle" aria-label="Open search">Search</button>
+            <form class="search__form" action="">
+                <label class="sr-only" for="search"></label>
+                <input type="search" id="search" placeholder="&#128269; pesquisar cursos"/>
+            </form>
+        </div>
+  
+        <div class="buttons">
+          <a href="#" onclick="openModal()">
+            <button>LOGIN</button>
+          </a>
+        </div>   
+        <div class="buttommenu" style="margin: 20px; position: relative;">
+            <button id="toggleButton" style="background-color: #b1dbff; border: none; cursor: pointer; padding: 10px; border-radius: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+    
+            <!-- Lista sobreposta -->
+            <ul id="itemList" style="
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+                display: none; 
+                position: absolute; 
+                top: 100%; /* Coloca a lista abaixo do botão */
+                right: 0; 
+                background-color: #b1dbff;
+                border: 1px solid #ccc; 
+                width: 150px; /* Define a largura da lista */">
+                
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="index.html">Home Page</a></li>
+                <li style="background-color: #b1dbff; padding: 10px;"><a href="#" onclick="openModal()">login</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="sobrenóslogin.html"> Sobre Nós</a></li>
+                <li style="background-color: #b1dbff; padding: 10px; border-bottom: 1px solid #b1dbff;"><a href="cursoslogin.html"> Cursos </a></li>
+            </ul>
+        </div>
+      </header>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Iframe para carregar o formulário de login/registro -->
+            <iframe src="login.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir o modal
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Fecha o modal se clicar fora do conteúdo
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    <!--texto apresentação-->
+    <h1 class="titulo">SOBRE NÓS</h1>
+
+    <!--primeiro paragrafo-->
+    <div class="container">
+        <img src="IMAGENS/Professor.JPG" class="imagem_esquerda">
+        <p class="texto">Um portal onde professores dedicados podem hospedar suas aulas e compartilhar conhecimento com uma comunidade de alunos ávidos por aprendizado. Oferecemos uma plataforma acessível, onde estudantes podem explorar uma variedade de cursos livres e aprender no seu próprio ritmo, sempre com diversão e entusiasmo.</p>
+    </div>
+    
+    <!--segundo paragrafo-->
+    <div class="container">
+        <img src="IMAGENS/Aluno.JPG" class="imagem_direita">
+        <p class="texto">Além de aprender, nossos alunos têm a chance de se tornar tutores após concluir um curso. Ao se inscrever e ser aprovado pelo professor que criou o curso, eles podem ajudar outros alunos, reforçando o aprendizado e contribuindo para o crescimento de todos. É uma forma colaborativa de manter o ciclo de conhecimento sempre ativo.</p>
+    </div>
+
+    <!--terceiro paragrafo-->
+    <div class="container">
+        <img src="IMAGENS/Tutor.JPG" class="imagem_esquerda">
+        <p class="texto">Nossa missão é promover um ambiente dinâmico e colaborativo de aprendizado. Acreditamos que ensinar e aprender são processos complementares e, no PROFFY, estamos criando uma comunidade onde todos têm algo a ensinar e a aprender. Venha fazer parte dessa jornada e descubra como o conhecimento pode transformar vidas!</P>
+    </div>
+
+    <!--chamamento final-->
+    <H4>Vamos fazer algo incrível juntos, PROFFY!</H4>
+
+     <!--título diretores-->
+    <h1 class="titulo">NOSSOS DIRETORES</h1>
+
+
+  <!-- Swiper carrossel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <img src="IMAGENS/ALLAN.jpg">
+          <h1>Allan</h1>
+          <p>Visionário CEO, com 25 anos. Desde jovem, Allan sempre teve uma ânsia insaciável por aprender. Começou sua jornada criando jogos de RPG Maker e foi aprimorando suas habilidades, saciando sua curiosidade desde bem antes de iniciar a faculdade. Hoje, essa paixão e dedicação à tecnologia o levam a liderar o Proffy com inovação e entusiasmo.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="IMAGENS/KAUÊ.jpg">
+        <h1>Kauê</h1>
+        <p>Diretor de Desenvolvimento de Produção, com 19 anos. Desde cedo, Kauê sempre teve uma paixão por tecnologia, o que o levou a se aprofundar no mundo do desenvolvimento de software. Sua dedicação e entusiasmo são motores que impulsionam a inovação aqui no Proffy.</p></div>
+      <div class="swiper-slide">
+        <img src="IMAGENS/LARISSA.jpg">
+        <h1>Larissa</h1>
+        <p>Diretora de Recursos Humanos, com 31 anos. Apaixonada por comunicação, educação e tecnologia, Larissa sempre teve uma sede por aprendizado.Sua dedicação transforma desafios em oportunidades, tornando o ambiente do Proffy um lugar de crescimento contínuo e inovação. </p></div>
+      <div class="swiper-slide">
+        <img src="IMAGENS/MATHEUS.jpg">
+        <h1>Matheus</h1>
+        <p>Diretor de Desenvolvimento de Negócios, com apenas 18 anos. Desde pequeno sempre teve uma curiosidade insaciável para entender como as coisas funcionavam. Essa paixão o levou ao mundo da tecnologia e do desenvolvimento de software, onde agora aplica seu talento e conhecimento para impulsionar o Proffy a novos patamares.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="IMAGENS/VINÍCIUS.jpg">
+        <h1>Vinícius</h1>
+        <p>Diretor de Projeto, com 19 anos. Foi incentivado pela irmã e por alguns professores, para entrar no mundo da tecnologia. Vinícius traz um toque descontraído para nossa equipe, lembrando-nos que tudo tem seu valor.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="IMAGENS/YASMIN.jpg">
+        <h1>Yasmin</h1>
+        <p>Diretora de Imagem, com apenas 19 anos. Uma verdadeira artista, Yasmin traz uma perspectiva única e criativa ao Proffy. Inspirada por um familiar, ela decidiu seguir carreira na área da tecnologia, e agora, combinando suas habilidades artísticas com a paixão por codificação, cria interfaces deslumbrantes e funcionais. Seu trabalho transforma ideias em realidade visual, dando vida ao Proffy.</p>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div id="containericons">
+    <style>
+        /* ===================== 
+           Menu Lateral de Ícones 
+           ===================== */
+        #icons {
+            width: 250px;
+            height: auto;
+            position: fixed;
+            top: 30%;
+            left: -200px; /* Mantém o menu fora da tela inicialmente */
+            border-radius: 10px;
+            transition: left 0.3s ease; /* Animação suave para o movimento */
+        }
+
+        #icons ul {
+            list-style: none;
+        }
+
+        #icons ul li {
+            display: block;
+            background: #131313;
+            padding: 10px;
+            height: 18px;
+            position: relative;
+            transition: all 0.5s ease;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        #icons ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Cores individuais para cada ícone */
+        #icons ul li:nth-child(1) {
+            background: #ff0000;
+        }
+
+        #icons ul li:nth-child(2) {
+            background: #030379;
+        }
+
+        #icons ul li:nth-child(3) {
+            background: #1c1f1d;
+        }
+
+        #icons ul li:nth-child(4) {
+            background: #11aeef;
+        }
+
+        #icons ul li:nth-child(5) {
+            background: #ff00ff;
+        }
+
+        #icons ul li span {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            right: 18px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        /* Efeito de hover nos ícones */
+        #icons ul li:hover {
+            cursor: pointer;
+            background: #131313;
+            opacity: 0.8;
+            border-left: 10px solid #fff;
+            transform: translateX(150px);
+        }
+    </style>
+    <nav id="icons">
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/@WebOnlineDesenvolve">
+                    meu youtube
+                    <span>
+                        <i class="fa fa-youtube-play"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com">
+                    meu facebook
+                    <span>
+                        <i class="fa fa-facebook"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com">
+                    meu github
+                    <span>
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/mynetwork/grow/">
+                    meu linkedin
+                    <span>
+                        <i class="fa fa-linkedin"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com">
+                    meu instagram
+                    <span>
+                        <i class="fa fa-instagram"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="sobrenóslogin.html">Sobre Nós</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h4>Contato</h4>
+                <ul>
+                    <li>Email: contato@exemplo.com</li>
+                    <li>Telefone: (11) 1234-5678</li>
+                    <li>Endereço: Rua Exemplo, 123 - Cidade, Estado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </footer>
+ <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const itemList = document.getElementById('itemList');
+
+    toggleButton.addEventListener('click', function() {
+        if (itemList.style.display === "none" || itemList.style.display === "") {
+            itemList.style.display = "block"; // Mostra a lista
+        } else {
+            itemList.style.display = "none"; // Oculta a lista
+        }
+    });
+</script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+<script src="crud.js">  </script>
+</body>
+</html>
